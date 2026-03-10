@@ -52,13 +52,13 @@ class VenueCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      model.subtitle,
+                      model.title,
                       style: AppTextStyles.style6Bold.copyWith(
                         color: AppColors.white.withValues(alpha: 0.7),
                       ),
                     ),
                     Text(
-                      model.title,
+                      model.subtitle,
                       style: AppTextStyles.style12Bold.copyWith(
                         color: AppColors.secondaryColor,
                       ),
