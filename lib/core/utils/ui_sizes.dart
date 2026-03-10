@@ -41,5 +41,5 @@ abstract class UiSizes {
   static const double venueCardHeightS = 120;
   static const double venueCardHeightL = 155;
   static const double venueIconCircleSize = 28;
-  static const double venueArrowIconSize = 14;
+  static const double venueArrowIconSize = 12;
 }

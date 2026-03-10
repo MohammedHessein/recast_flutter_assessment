@@ -6,6 +6,7 @@ import 'package:recast_flutter_assessment/core/constants/app_strings.dart';
 import 'package:recast_flutter_assessment/core/utils/app_colors.dart';
 import 'package:recast_flutter_assessment/core/utils/app_text_styles.dart';
 import 'package:recast_flutter_assessment/core/utils/ui_sizes.dart';
+import 'package:recast_flutter_assessment/features/home/data/models/venue_selection_model.dart';
 import 'package:recast_flutter_assessment/features/home/presentation/cubit/home_cubit.dart';
 import 'package:recast_flutter_assessment/features/home/presentation/widgets/venue_card.dart';
 import 'package:skeletonizer/skeletonizer.dart';
@@ -53,12 +54,7 @@ class VenueSelectionSection extends StatelessWidget {
 
                   if (isLoading) {
                     return VenueCard(
-                      model: venueData.isNotEmpty
-                          ? venueData[0]
-                          : (context
-                                .read<HomeCubit>()
-                                .repository
-                                .getVenueSelectionData()[0]),
+                      model: VenueSelectionModel.initial(),
                       height: height,
                     );
                   }
