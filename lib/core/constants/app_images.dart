@@ -6,4 +6,5 @@ abstract class AppImages {
   static const String item = '$path/item.png';
   static const String nobiko = '$path/nobiko.png';
   static const String olivestree = '$path/olivestree.png';
+  static const String settings = '$path/Setting.png';
 }

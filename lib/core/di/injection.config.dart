@@ -16,6 +16,11 @@ import 'package:recast_flutter_assessment/features/home/data/repositories/mock_l
 import 'package:recast_flutter_assessment/features/home/presentation/cubit/home_cubit.dart'
     as _i540;
 
+import 'package:recast_flutter_assessment/features/profile/data/repositories/profile_repository.dart'
+    as _i600;
+import 'package:recast_flutter_assessment/features/profile/presentation/cubit/profile_cubit.dart'
+    as _i601;
+
 extension GetItInjectableX on _i174.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
   _i174.GetIt init({
@@ -26,8 +31,14 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i521.MockLoyaltyPointsRepository>(
       () => _i521.MockLoyaltyPointsRepository(),
     );
+    gh.lazySingleton<_i600.MockProfileRepository>(
+      () => _i600.MockProfileRepository(),
+    );
     gh.factory<_i540.HomeCubit>(
       () => _i540.HomeCubit(gh<_i521.MockLoyaltyPointsRepository>()),
+    );
+    gh.factory<_i601.ProfileCubit>(
+      () => _i601.ProfileCubit(gh<_i600.MockProfileRepository>()),
     );
     return this;
   }

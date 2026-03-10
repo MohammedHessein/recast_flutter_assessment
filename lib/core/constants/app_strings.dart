@@ -26,4 +26,10 @@ abstract class AppStrings {
   static const String edit = 'Edit';
   static const String loyaltyHistory = 'Loyalty History';
   static const String credits = 'Credits';
+
+  // Exit Dialog
+  static const String exit = 'Exit';
+  static const String exitConfirmation = 'Are you sure you want to exit?';
+  static const String yes = 'Yes';
+  static const String no = 'No';
 }

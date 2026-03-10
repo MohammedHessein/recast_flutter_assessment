@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:recast_flutter_assessment/core/constants/app_constatnts.dart';
+import 'package:recast_flutter_assessment/core/constants/app_constants.dart';
 import 'package:recast_flutter_assessment/core/utils/app_colors.dart';
 
 abstract class AppTextStyles {
@@ -57,6 +57,12 @@ abstract class AppTextStyles {
     fontSize: 11.sp,
     fontWeight: FontWeight.bold,
     color: AppColors.primaryColor,
+  );
+  static TextStyle style24Bold = TextStyle(
+    fontFamily: AppConstants.fontFamily,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.textPrimary,
   );
   static TextStyle style8Bold = TextStyle(
     fontFamily: AppConstants.fontFamily,

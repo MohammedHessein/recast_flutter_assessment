@@ -61,7 +61,7 @@ class LoyaltyCardWidget extends StatelessWidget {
               ),
               CircleAvatar(
                 radius: UiSizes.smallAvatarRadius.r,
-                backgroundColor: AppColors.white.withValues(alpha: 0.1),
+                backgroundColor: AppColors.white.withValues(alpha: 0),
                 child: Icon(
                   FontAwesomeIcons.circleUser.data,
                   color: AppColors.white.withValues(alpha: 0.6),
