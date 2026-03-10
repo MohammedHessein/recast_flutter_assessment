@@ -35,7 +35,7 @@ abstract class UiSizes {
   static const double smallIconSize = 20;
   static const double recentOrderImageSize = 24;
   static const double recentOrderImageRadius = 6;
-  static const double recentOrderImagePadding = 8;
+  static const double recentOrderImagePadding = 5;
   static const double detailsButtonPaddingH = 10;
   static const double detailsButtonPaddingV = 6;
   static const double detailsButtonRadius = 7;
