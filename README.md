@@ -104,4 +104,4 @@ experience. Every component is built with reusability and performance in mind. F
 out for any clarifications regarding the implementation.
 
 ---
-*Created with ❤️ for the Recast Technical Assessment.*
+*Created with Mohammed Hussein❤️ for the Recast Technical Assessment.*
