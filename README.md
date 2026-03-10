@@ -41,15 +41,12 @@ testability.
 
 - **Framework**: [Flutter](https://flutter.dev/) (latest stable)
 - **State Management**: [flutter_bloc](https://pub.dev/packages/flutter_bloc)
-- **DI
-  **: [get_it](https://pub.dev/packages/get_it) & [injectable](https://pub.dev/packages/injectable)
+- **DI**: [get_it](https://pub.dev/packages/get_it) & [injectable](https://pub.dev/packages/injectable)
 - **Responsiveness**: [flutter_screenutil](https://pub.dev/packages/flutter_screenutil)
-- **Icons/Images
-  **: [flutter_svg](https://pub.dev/packages/flutter_svg), [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
+- **Icons/Images**: [flutter_svg](https://pub.dev/packages/flutter_svg), [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
 - **UI Enhancement**: [skeletonizer](https://pub.dev/packages/skeletonizer) for elegant loading
   states.
-- **Gird Layouts
-  **: [flutter_staggered_grid_view](https://pub.dev/packages/flutter_staggered_grid_view)
+- **Gird Layouts**: [flutter_staggered_grid_view](https://pub.dev/packages/flutter_staggered_grid_view)
 
 ---
 
