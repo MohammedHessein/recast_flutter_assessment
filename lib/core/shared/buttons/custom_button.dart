@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(
           horizontal: UiSizes.detailsButtonPaddingH.w,
-          vertical: UiSizes.detailsButtonPaddingV.h,
+          vertical: UiSizes.detailsButtonPaddingV.h - 4,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(UiSizes.detailsButtonRadius.r),
