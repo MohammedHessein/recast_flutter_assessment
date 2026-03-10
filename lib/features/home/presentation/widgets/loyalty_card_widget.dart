@@ -40,6 +40,7 @@ class LoyaltyCardWidget extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,47 +71,60 @@ class LoyaltyCardWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: UiSizes.spaceHeightL.h),
-          Text(
-            model.points.toString().replaceAllMapped(
-              AppRegex.pointsFormatter,
-              (Match m) => '${m[1]},',
-            ),
-            style: AppTextStyles.style22Bold.copyWith(
-              color: AppColors.secondaryColor,
-              letterSpacing: UiSizes.pointsLetterSpacing,
-            ),
-          ),
-          SizedBox(height: UiSizes.spaceHeightM.h),
-          Stack(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: UiSizes.progressBarHeight.h,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: AppColors.primaryColor,
-                  borderRadius: BorderRadius.circular(
-                    UiSizes.progressBarRadius.r,
-                  ),
+              Text(
+                model.points.toString().replaceAllMapped(
+                      AppRegex.pointsFormatter,
+                      (Match m) => '${m[1]},',
+                    ),
+                style: AppTextStyles.style22Bold.copyWith(
+                  color: AppColors.secondaryColor,
+                  letterSpacing: UiSizes.pointsLetterSpacing,
                 ),
               ),
-              FractionallySizedBox(
-                widthFactor: model.progressPercent,
-                child: Container(
-                  height: UiSizes.progressBarHeight.h,
-                  decoration: BoxDecoration(
-                    gradient: AppColors.secondaryGradient,
-                    borderRadius: BorderRadius.circular(
-                      UiSizes.progressBarRadius.r,
+              SizedBox(height: UiSizes.spaceHeightS.h),
+              Stack(
+                children: [
+                  Container(
+                    height: UiSizes.progressBarHeight.h,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: AppColors.primaryColor,
+                      borderRadius: BorderRadius.circular(
+                        UiSizes.progressBarRadius.r,
+                      ),
                     ),
                   ),
-                ),
+                  FractionallySizedBox(
+                    widthFactor: model.progressPercent,
+                    child: Container(
+                      height: UiSizes.progressBarHeight.h,
+                      decoration: BoxDecoration(
+                        gradient: AppColors.secondaryGradient,
+                        borderRadius: BorderRadius.circular(
+                          UiSizes.progressBarRadius.r,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: AppColors.secondaryColor.withValues(
+                              alpha: 0.3,
+                            ),
+                            blurRadius: 15.r,
+                            offset: Offset(0, 4.h),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,6 +159,10 @@ class LoyaltyCardWidget extends StatelessWidget {
                               width: UiSizes.recentOrderImageSize.w,
                               height: UiSizes.recentOrderImageSize.h,
                               decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: AppColors.primaryColor,
+                                  width: 2,
+                                ),
                                 image: DecorationImage(
                                   image: AssetImage(path),
                                   fit: BoxFit.cover,
@@ -160,13 +178,10 @@ class LoyaltyCardWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 20.h),
-                child: CustomButton(
-                  text: AppStrings.moreDetails,
-                  icon: Icons.arrow_forward,
-                  onTap: () {},
-                ),
+              CustomButton(
+                text: AppStrings.moreDetails,
+                icon: Icons.arrow_forward,
+                onTap: () {},
               ),
             ],
           ),

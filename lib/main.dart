@@ -7,6 +7,7 @@ import 'package:recast_flutter_assessment/core/router/app_router.dart';
 import 'package:recast_flutter_assessment/core/router/app_routes.dart';
 import 'package:recast_flutter_assessment/core/utils/app_colors.dart';
 import 'package:recast_flutter_assessment/core/utils/ui_sizes.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   configureDependencies();

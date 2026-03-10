@@ -84,7 +84,7 @@ class LoyaltyHistoryItemWidget extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: AppColors.secondaryGradient,
                         borderRadius: BorderRadius.circular(
-                          UiSizes.detailsButtonRadius.r,
+                          UiSizes.detailsButtonRadiusTwo.r,
                         ),
                       ),
                       child: Text(
